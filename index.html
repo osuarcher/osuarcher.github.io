@@ -1,0 +1,573 @@
+<html>
+	<head>
+		<title>Tech Team Mobile Development</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+ 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+ 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<style>
+			#title{
+				background:rgba(253,194,66,.8);
+				border: 1px solid black;
+			}
+
+			#header{
+				padding:20px;
+			}
+
+			#RightSideBar{
+				display: block;
+				border: 1px black solid;
+				background: rgba(119,136,153,.9);
+				padding-bottom: 30px;
+				margin-left: auto;
+				margin-right: auto;
+				width:60%;
+			}
+
+			#LeftSideBar{
+				width:50%;
+			}
+
+			#RightSideBar img{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				border: 1px black solid;
+				width: 90%;
+				height: 150%;
+			}
+
+			#RightSideBar h3{
+				text-align: center;
+				padding-right: 20px;
+				text-decoration: underline;
+			}
+
+			#RightSideBar td{
+				width:60%;
+				padding: 10px 10px 0px 10px;
+				font-weight: bold;
+			}
+
+			#Overview{
+				background: rgba(18,199,253,.8);
+				border: 1px solid black;
+				padding-left: 20px;
+				margin-top: 100px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 60%;
+				font-size: 18px;
+			}
+
+			#Overview a, h3{
+				color: black;
+			}
+
+			#Intro{
+				background: rgba(119,136,153,.8);
+				border: 1px solid black;
+				font-size: 18px;
+				font-weight: bold;
+				margin-top: 50px;
+				text-align: center;;
+			}
+
+			#Overview ul{
+				list-style-type: none;
+			}
+
+
+			.section{
+				display: block;
+				border: 2px solid black;
+				margin: 5px;
+				border-radius: 10px;
+			}
+			.section h3{
+				font-weight: bold;
+				text-decoration: underline;
+			}
+
+			.section img{
+				margin-bottom: 10px;
+			}
+
+			.section td{
+				padding: 10px;
+			}
+
+			#AppSection #SourceSection, h2{
+				font-weight: bold;
+			}
+
+			.bold {
+				font-weight: bold;
+			}
+
+
+			h4.box{
+				display: block;
+				height: 250px;
+				width: 200px;
+				border-radius: 175px;
+				border: 2px black solid;
+				padding: 20px 5px 0px 0px;
+				text-align: center;
+				font-weight: bold;
+				text-decoration: underline;
+				background-position: center;
+				background-repeat: no-repeat;
+				margin-right: 20px;
+			}
+
+			#header{
+				background-image: url("Background.jpg");
+				background-position: center;
+				background-repeat: no-repeat;
+				height: 87%;
+			}
+
+			#App{
+				margin-top: 0px;
+				margin-bottom: 0px;
+				background:rgba(175,242,75,.8);
+			}
+
+			#Source{
+				margin-top: 0px;
+				margin-bottom: 0px;
+				background:rgba(139,199,236,.8);
+			}
+
+			#Ref{
+				margin-top: 0px;
+				margin-bottom: 0px;
+				background:rgba(182,184,201,.8);
+			}
+
+			hr{
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+
+			#Location{
+				background-image: url("GeolocationCover.png");
+			}
+			#Camera{
+				background-image: url("CameraCover.png");
+			}
+			#Speech{
+				background-image: url("SpeakerCover.png");
+			}
+			#Accel{
+				background-image: url("AccelCover.png");
+			}
+			#Light{
+				background-image: url("LightCover.png");
+			}
+
+			h4.box:hover{
+				border: 5px red solid;
+			}
+		</style>
+				<!--Heading -->
+		<center>
+		<div id="header">
+		<h1 align=center id="title">Mobile Application Development</h1>
+		<table>
+			<tr>
+				<td id="LeftSideBar">
+					<div id="Intro">
+						<h2>Introduction</h2>
+						<p>This page is a product of the Tech Team Mobile Applicaiton Development for the Capstone Class at The Ohio State University. Below is a general outline of how to develop a mobile application on both Android and iOS devices. We discuss different sensors both Apple and Android phones carry as well as the source code to interact with them.</p>
+					</div>
+					<div id="Overview">
+						<h3>Content</h3>
+						<ul>
+							<li><a href="#Intro">Introduction</a></li>
+							<li><a href="#App" class="AppClick">Application</a></li>
+							<ul>
+								<li><a class="AppCLick" href="#AppOverview">Overview</a></li>
+								<li><a class="AppCLick" href="#Sensors">Sensors</a></li>
+									<ul>
+										<li><a class="AppCLick" href="#Location">Geolocation</a></li>
+										<li><a class="AppCLick" href="#Camera">Camera</a></li>
+										<li><a class="AppCLick" href="#Speech">Speech</a></li>						
+										<li><a class="AppCLick" href="#Accel">Accelerometer</a></li>
+										<li><a class="AppCLick" href="#Light">Light Sensor</a><li>
+									</ul>
+							</ul>
+							<li><a href="#Source" class="SourceClick">Source Code</a><li>
+							<ul>
+								<li><a class="SourceCLick" href="#Droid">Android</a></li>
+								<li><a class="SourceCLick" href="#Apple">iOS</a></li>
+							</ul>
+							<li><a href="#Ref" class="RefClick">Resources</a></li>
+						</ul>
+					</div>
+					<div>
+				</td>
+				<td>
+					<div id="RightSideBar">
+						<h3>Mobile Application</h3>
+						<img src="AppleAndroid.png"/>
+						<table>
+							<tr>
+								<td class="bold">
+									Website Author:
+								</td>
+								<td>
+									Richard Kochert
+								</td>
+							</tr>
+							<tr>
+								<td class="bold">
+									Developers:
+								</td>
+								<td>
+									Sam Rosenstein
+								</td>
+							</tr>
+							<tr>
+								<td >
+
+								</td>
+								<td>
+									Xuanlin Yang
+								</td>
+							</tr>
+							<tr>
+								<td class="bold">
+									Current Apple Version:
+								</td>
+								<td>
+									iOS 9 (2015)
+								</td>
+							</tr>
+							<tr>
+								<td class="bold">
+									Current Android Version:
+								</td>
+								<td>
+									Andoird 6.0 Marshmallow (2015)
+								</td>
+							</tr>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+		<!--Application -->
+
+		<h1 id="App">Application <span id="AppSpan" class="glyphicon glyphicon-menu-right"></span></h1>
+		<div id="AppSection" class="collapse">
+			<h2 id="AppOverview">Overview</h2>
+			<p>This application is a template to show off what sensors mobile devices have access to. It is also a tool for other teams to use in order to improve their Capstone project. All code avaliable here is open-sourced and free to use for your own purpose. If you have any questions feel free to contact the developers, whose email is located in the Referance section. Enjoy!</p>
+			<h2 id="Sensors">Sensors</h2>
+			<table width="50%">
+				<tr>
+					<td>
+						<h4 class="box" id="Location">Geolocation</h4>
+					</td>
+
+					<td>
+						<h4 class="box" id="Camera">Camera</h4>
+					</td>
+
+					<td>
+						<h4 class="box" id="Speech">Speech</h4>
+					</td>
+
+					<td>
+						<h4 class="box" id="Accel">Accelerometer</h4>
+					</td>
+					<td>
+						<h4 class="box" id="Light">Light Sensor</h4>
+					</td>
+				</tr>
+				<!--Show this when click box -->
+				<tr id="GeolocationSection" class="collapse" >
+					<td colspan=5>
+						<div class="section">
+							<center>
+								<h3>Geolocation</h3>
+								This grabs the location of the device using either Google Maps or Apple Maps. Can be used for tracking devices, GPS coordinates, and where people use the app.
+								<table>
+									<tr>
+										<td>
+											<h3>Android Source Code</h3>
+										</td>
+										<td>
+											<h3>Apple Source Code</h3>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="AndroidSourceCodeScreenshots/Geolocation.png"/>
+										</td>
+										<td>
+											<img src="AppleSourceCodeScreenshots/Geolocation.png"/>									
+										</td>
+								</table>
+							</center>
+						</div>
+					</td>
+				</tr>
+				<tr id="CameraSection" class="collapse" >
+					<td colspan=5>
+						<div class="section">
+							<center>
+								<h3 align=center>Camera</h3>
+								This uses your mobile devices camera as well as its image gallery. It will store and retrieve images from the mobile devices gallery.
+								<table>
+									<tr>
+										<td>
+											<h3>Android Source Code</h3>
+										</td>
+										<td>
+											<h3>Apple Source Code</h3>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="AndroidSourceCodeScreenshots/Camera.png"/>
+										</td>
+										<td>
+											<img src="AppleSourceCodeScreenshots/Camera.png"/>									
+										</td>
+								</table>
+							</center>
+						</div>
+					</td>
+				</tr>
+				<tr id="SpeechSection" class="collapse" >
+					<td colspan=5>
+						<div class="section">
+							<center>
+								<h3 align=center>Speech to Text and Text to Speech</h3>
+								This uses the microphone and speaker of the mobile device to convert voice to text as well as text to voice. 
+								<table>
+									<tr>
+										<td>
+											<h3>Android Source Code</h3>
+										</td>
+										<td>
+											<h3>Apple Source Code</h3>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="AndroidSourceCodeScreenshots/SpeechToText.png"/>
+										</td>
+										<td>
+											<img src="AppleSourceCodeScreenshots/TextToSpeech.png"/>									
+										</td>
+								</table>
+							</center>
+						</div>
+					</td>
+				</tr>
+
+				<tr id="LightSection" class="collapse" >
+					<td colspan=5>
+						<div class="section">
+							<center>
+								<h3 align=center>Light Sensor</h3>
+								This sensors uses the light sensor on your mobile device to determine the amount of light going into your device.
+								<table>
+									<tr>
+										<td>
+											<h3>Android Source Code</h3>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="AndroidSourceCodeScreenshots/Light.png"/>
+										</td>
+								</table>
+							</center>
+						</div>
+					</td>
+				</tr>
+				<tr id="AccelerometerSection" class="collapse" >
+					<td colspan=5>
+						<div class="section">
+							<center>
+								<h3 align=center>Accelerometer</h3>
+								This simple sensor can retrieve the rotation and force applied to the mobile device. Every 3D object has an X, Y, and Z plain of rotation.
+								<table>
+									<tr>
+										<td>
+											<h3>Android Source Code</h3>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img src="AndroidSourceCodeScreenshots/Accel.png"/>
+										</td>
+								</table>
+							</center>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<hr/>
+		<!--Source Code -->
+		<h1 id="Source">Source Code<span id="SourceSpan" class="glyphicon glyphicon-menu-right"></span></h1>
+		<div id="SourceSection" class="collapse">
+			<h2 id="Droid"><a href="https://github.com/muyixuanlin/TechTeam-MobileDev">Android</a></h2>
+			<h2 id="Apple"><a href="https://github.com/rosensts/TechTeamIOS">iOS</a></h2>
+		</div>
+		<hr/>
+		<!--Resources-->
+		<h1 id="Ref">Resources<span id="RefSpan" class="glyphicon glyphicon-menu-right"></span></h1>
+		<div id="RefSection" class="collapse">
+			<h2>Download links</h2>
+				<h3><a href="http://developer.android.com/sdk/index.html">Android Studios</a></h3>
+				<h3><a href="https://developer.apple.com/xcode/download/">XCode</a></h3>
+
+			<h2>Tutorials</h2>
+				<h3><a href="http://developer.android.com/training/index.html">Android Studios</a></h3>
+				<h4><a href="http://www.tutorialspoint.com/java/">Java</a></h4>
+				<h3><a href="https://developer.apple.com/library/ios/referencelibrary/GettingStarted/DevelopiOSAppsSwift/Lesson2.html">XCode</a></h3>
+				<h4><a href="http://www.tutorialspoint.com/swift/">Swift</a></h4>
+
+			<h2>Contact</h2>
+				<h3>Xuanlin Yang: muyixuanlin@gmail.com </h3>
+				<h3>Sam Rosenstein: rosenstein.samuel1@gmail.com</h3>
+		</div>
+	</center>
+	</body>
+
+<script>
+	$(document).ready(function(){
+		(function($) {
+		    $.fn.goTo = function() {
+		        $('html, body').animate({
+		            scrollTop: $(this).offset().top + 'px'
+		        }, 'fast');
+		        return this; // for chaining...
+		    }
+		})(jQuery);
+
+
+		$('.AppCLick').click(function(){
+			$('#AppSection').collapse('toggle');
+			$('#AppSection').goTo();
+		});
+		$('.SourceClick').click(function(){
+			$('#SourceSection').collapse('toggle');
+			$('#SourceSection').goTo();
+		});
+		$('.RefClick').click(function(){
+			$('#RefSection').collapse('toggle');
+			$('#RefSection').goTo();
+		});
+
+		$("#AppSpan").click(function(){
+			$("#AppSection").collapse("toggle");
+			if($("#AppSection").attr("aria-expanded") == "true")
+			{
+				$(this).attr("class","glyphicon glyphicon-menu-down");
+			}
+			else
+			{
+				$(this).attr("class","glyphicon glyphicon-menu-right");
+			}
+		});
+
+		$("#SourceSpan").click(function(){
+			$("#SourceSection").collapse("toggle");
+			$(this).attr("class","glyphicon glyphicon-menu-down");
+			if($("#SourceSection").attr("aria-expanded") == "true")
+			{
+				$(this).attr("class","glyphicon glyphicon-menu-down");
+			}
+			else
+			{
+				$(this).attr("class","glyphicon glyphicon-menu-right");
+			}
+		});
+
+		$("#RefSpan").click(function(){
+			$("#RefSection").collapse("toggle");
+			if($("#RefSection").attr("aria-expanded") == "true")
+			{
+				$(this).attr("class","glyphicon glyphicon-menu-down");
+			}
+			else
+			{
+				$(this).attr("class","glyphicon glyphicon-menu-right");
+			}
+		});
+
+		$('#Location').click(function(){
+			$('#MicrophoneSection').collapse("hide");
+			$('#CameraSection').collapse("hide");
+			$('#VoiceSection').collapse("hide");
+			$('#AccelerometerSection').collapse("hide");
+			$('#SpeechSection').collapse("hide");
+			$('#LightSection').collapse("hide");
+			$('#FingerprintSection').collapse("hide");
+			$('#BluetoothSection').collapse("hide");
+			$('#GeolocationSection').collapse("toggle");
+		});
+
+		$('#Camera').click(function(){
+			$('#GeolocationSection').collapse("hide");
+			$('#MicrophoneSection').collapse("hide");
+			$('#ScreenSection').collapse("hide");
+			$('#AccelerometerSection').collapse("hide");
+			$('#SpeechSection').collapse("hide");
+			$('#LightSection').collapse("hide");
+			$('#FingerprintSection').collapse("hide");
+			$('#BluetoothSection').collapse("hide");
+			$('#CameraSection').collapse("toggle");
+		});
+
+		$('#Speech').click(function(){
+			$('#GeolocationSection').collapse("hide");
+			$('#CameraSection').collapse("hide");
+			$('#AccelerometerSection').collapse("hide");
+			$('#SpeakerSection').collapse("hide");
+			$('#LightSection').collapse("hide");
+			$('#SpeechSection').collapse("toggle");
+		});
+
+		
+		$('#Accel').click(function(){
+			$('#GeolocationSection').collapse("hide");
+			$('#MicrophoneSection').collapse("hide");
+			$('#CameraSection').collapse("hide");
+			$('#ScreenSection').collapse("hide");
+			$('#SpeechSection').collapse("hide");
+			$('#LightSection').collapse("hide");
+			$('#FingerprintSection').collapse("hide");
+			$('#BluetoothSection').collapse("hide");
+			$('#AccelerometerSection').collapse("toggle");			
+		});
+
+		$('#Light').click(function(){
+			$('#GeolocationSection').collapse("hide");
+			$('#MicrophoneSection').collapse("hide");
+			$('#CameraSection').collapse("hide");
+			$('#ScreenSection').collapse("hide");
+			$('#AccelerometerSection').collapse("hide");
+			$('#SpeechSection').collapse("hide");
+			$('#FingerprintSection').collapse("hide");
+			$('#BluetoothSection').collapse("hide");
+			$('#LightSection').collapse("toggle");
+
+		});
+
+
+	});
+
+</script
+</html>
